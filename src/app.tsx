@@ -23,7 +23,15 @@ export class App extends Component {
           <input type="text" value={this.state.value} onInput={this.onInput} />
           <button type="submit">Update</button>
         </form>
+        <Clock />
       </div>
     )
+  }
+}
+
+class Clock extends Component {
+  render () {
+    let time = new Date().toLocaleTimeString()
+    return <span>{time}</span>
   }
 }
