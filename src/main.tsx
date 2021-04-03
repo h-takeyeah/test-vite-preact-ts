@@ -21,4 +21,4 @@ import './index.css'
 //エラーになったのでhが自動でinjectionされるのはvite固有の動き
 // ref. https://preactjs.com/guide/v10/differences-to-react#jsx-constructor
 
-render(<App />, document.getElementById('app')!) // !が必要なのマジで謎
+render(<App />, document.getElementById('app')!) // ! が必要な理由: getElementById()の返り値がnon-nullだとコンパイラに伝えるため
